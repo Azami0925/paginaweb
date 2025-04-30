@@ -26,11 +26,13 @@ export function AuditionDetails() {
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
              <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-primary" />
-                <p><strong className="font-semibold">Categorías:</strong>
+                {/* Changed <p> to <div> to fix hydration error (div cannot be child of p) */}
+                <div>
+                    <strong className="font-semibold mr-1">Categorías:</strong>
                     <Badge variant="secondary" className="ml-1">Baile</Badge>
                     <Badge variant="secondary" className="ml-1">Canto</Badge>
                     <Badge variant="secondary" className="ml-1">Rap</Badge>
-                 </p>
+                 </div>
              </div>
              <div className="flex items-center gap-2">
                 <UserCheck className="h-5 w-5 text-primary" />
